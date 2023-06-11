@@ -11,8 +11,7 @@ const loadObject = function(Name){
   return string ? JSON.parse(string) : []
 }
 
-//CommonJS style
-module.exports = {
+export default {
   saveObject,
   loadObject,
 }

@@ -1,10 +1,13 @@
-module.exports = {
+export default {
   entry: "./src/main.js",
   mode: "production",
+  experiments: {
+    outputModule: true,
+  },
   output: {
     library: {
-      type: "commonjs2", //For Espruino ("commonjs" doesn't work when exporting a class)
+      type: "module",
     },
-    filename: "lib.storage.min.js",
+    filename: "lib.storage.min.mjs",
   },
 }
